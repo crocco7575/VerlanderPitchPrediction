@@ -17,5 +17,5 @@ pip install matplotlib
 	- Here is the link to the Kaggle download: [[[https://www.kaggle.com/datasets/s903124/mlb-statcast-data](https://www.kaggle.com/datasets/s903124/mlb-statcast-data)]]
 	- Each dataset contains 700k + individual pitches from the respective season.
 - #### The Justin Verlander dataset used for training contains 10k + individual pitches from the 2017-2019 seasons
-	- This dataset was cleaned [[here](/scripts/CleanRawStatcastData)]
+	- This dataset was cleaned [[here](/scripts/CleanRawStatcastData.py)]
 
