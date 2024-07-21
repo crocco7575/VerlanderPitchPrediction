@@ -55,3 +55,35 @@ pip install matplotlib
 weighted avg       0.47      0.50      0.46      2036
 ```
 
+## Strike Zone Graph
+- #### In [StrikeZoneGraph.py](scripts/StrikeZoneGraph.py), a ```matplotlib``` scatter plot graph is created showing every pitch thrown by Verlander from 2017-2019, which are overlayed on a strike zone
+	- Each pitch type has a color-code
+	- ```plate_x``` and ```plate_z``` are used to graph the coordinates of each pitch
+	- The ```matplotlib``` graph can be seen [here](data/Verlander_Data/StrikeZoneGraph)
+## Inference
+
+- #### Users are prompted to enter in data for a "inference", or a model's prediction on brand-new data
+	- Ranges are gathered from [Ranges.py](scripts/Ranges.py) to display to the user, which guides them on a number/String to enter in for each feature
+	- This input data is stored in a dataframe to give to the loaded model for a prediction 
+- #### A prediction is made from the loaded model, and decoded with the ```Label_Encoder()``` class from the ```sklearn.preprocessing``` package
+- #### Probabilities for each possible description are also displayed on the screen, showing to the user the "behind the scenes thoughts" of the model
+	- ```model.predict_proba``` collects the probability for each description
+	- We then iterate through each label and display the probability for each outcome in the terminal
+	- Here is an example output to the user after they enter in inference data:
+```
+PREDICTION: ['ball']
+Probabilities (in %): 
+
+ball: 66.171
+blocked_ball: 0.212
+called_strike: 5.205
+foul: 8.402
+foul_bunt: 0.095
+foul_tip: 1.458
+hit_by_pitch: 0.672
+hit_into_play: 8.813
+swinging_strike: 8.950
+swinging_strike_blocked: 0.023
+```
+
+# END
